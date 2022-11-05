@@ -1,0 +1,6 @@
+web-apache:
+  image: httpd:latest
+  volumes:
+   - ./htdocs:/usr/local/apache2/htdocs
+  ports:
+   - "8082:80"

@@ -1,0 +1,4 @@
+web-echo:
+  image: mendhak/http-https-echo:23
+  ports:
+   - "8081:8080"
