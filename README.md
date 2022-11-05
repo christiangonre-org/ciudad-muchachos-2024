@@ -70,5 +70,11 @@ docker-compose down
 ```
 
 
+
 ## Extensiones de Docker
 https://docs.docker.com/desktop/extensions/
+
+## Charlas interesantes
+[Mi charla en SRE en Español](https://www.youtube.com/watch?v=xJbdyyFH2Qo)
+
+[Canal SRE en Español](https://www.youtube.com/user/JFACUSCH)
