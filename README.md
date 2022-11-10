@@ -29,6 +29,8 @@ En caso de instalar Docker en Windows, se recomienda instalarlo utilizando [Wind
 
     http://localhost:8080 --> Nginx
 
+    http://localhost:8080/version --> Web para ver la versión actual de Nginx
+
     http://localhost:8081 --> Echo Web server
 
     http://localhost:8082 --> Apache
@@ -62,7 +64,7 @@ $ docker-compose exec db mongorestore --uri mongodb://db:27017 --gzip  /backup/c
 
 Una vez hemos levantado la aplicación, ya podemos acceder sin ningún problema a través de esta URL http://localhost:8080
 
-Si queremos a acceder al panel de Traefik, que es el proxy que se encarga de permitirnos acceder a esta web lo podemos hacer a través de esta URL: http://localhost:8080/dashboard/#/
+Si queremos acceder al panel de Traefik, que es el proxy que se encarga de permitirnos acceder a esta web lo podemos hacer a través de esta URL: http://localhost:8080/dashboard/#/
 
 Si queremos parar esta aplicación, basta con ejecutar el siguiente comando:
 ```bash
