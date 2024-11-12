@@ -1,5 +1,6 @@
-nginx:
-  # image: nginx:1.21.5
-  image: nginx:1.15
-  ports:
-   - "8080:80"
+services:
+  nginx:
+    # image: nginx:1.27.2
+    image: nginx:1.15
+    ports:
+    - "8080:80"

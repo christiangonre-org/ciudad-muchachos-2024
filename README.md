@@ -14,14 +14,14 @@ En caso de instalar Docker en Windows, se recomienda instalarlo utilizando [Wind
 ## Instrucciones
 1. Nos descargamos este repositorio usando Git y vamos a la carpeta
     ```bash
-    git clone https://github.com/christiangonre-org/ciudad-muchachos-2022.git
-    cd ciudad-muchachos-2022
+    git clone https://github.com/christiangonre-org/ciudad-muchachos-2024.git
+    cd ciudad-muchachos-2024
     ```
 2. Con los siguientes comandos, vamos a proceder a levantar 3 contenedores diferentes (Nginx, Apache y otro web server que indica información de la petición web)
     ```bash
     docker-compose -f docker-compose-nginx.yaml -p nginx up -d
     docker-compose -f docker-compose-apache.yaml -p apache up -d 
-    docker-compose -f docker-compose-echo.yaml -p echo up -d
+    docker-compose -f docker-compose-container-info.yaml -p echo up -d
     ```
     *NOTA*: Si estás utilizando Linux, puedes utilizar el script [init.sh](init.sh) que se encuentra en el repositorio.
 
@@ -31,17 +31,17 @@ En caso de instalar Docker en Windows, se recomienda instalarlo utilizando [Wind
 
     http://localhost:8080/version --> Web para ver la versión actual de Nginx
 
-    http://localhost:8081 --> Echo Web server
+    http://localhost:8081 --> Container con información interna
 
     http://localhost:8082 --> Apache
 
-4. Para comprobar lo sencillo que es actualizar uno de los contenedores, vas a modificar el fichero [index.html](htdocs/index.html) y acceder a la web http://localhost:8082 para ver que se ha cambiado el contenido.
+4. Para comprobar lo sencillo que es actualizar uno de los contenedores, vas a modificar el fichero [index.html](htdocs/index_2.html) y acceder a la web http://localhost:8082/index_2.html para ver que se ha cambiado el contenido.
 
 5. Apagáis todo con el siguiente comando:
     ```docker
     docker-compose -f docker-compose-nginx.yaml -p nginx  down
     docker-compose -f docker-compose-apache.yaml -p apache down
-    docker-compose -f docker-compose-echo.yaml -p echo down
+    docker-compose -f docker-compose-container-info.yaml -p echo down
     ```
     *NOTA*: Podéis usar el script [stop.sh](stop.sh) para apagar todos los contenedores.
 
@@ -72,11 +72,8 @@ docker-compose down
 ```
 
 
-
 ## Extensiones de Docker
 https://docs.docker.com/desktop/extensions/
 
 ## Charlas interesantes
 [Mi charla en SRE en Español](https://www.youtube.com/watch?v=xJbdyyFH2Qo)
-
-[Canal SRE en Español](https://www.youtube.com/user/JFACUSCH)
